@@ -3,13 +3,13 @@ import { productsApi } from '../../../utils/Api';
 import { FaStar, FaStarHalfAlt, FaRegStar, FaShoppingCart, FaEye } from 'react-icons/fa';
 import { ImSpinner8 } from 'react-icons/im';
 import { useNavigate } from 'react-router-dom';
-import { useCart } from '../../common/CartContext'; // Import the cart context
+import { useCart } from '../../common/CartContext'; 
 
 const HomePage = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
-    const { addToCart } = useCart(); // Get the addToCart function from context
+    const { addToCart } = useCart(); 
 
     useEffect(() => {
         fetchProducts();
