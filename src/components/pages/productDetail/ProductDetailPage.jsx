@@ -9,7 +9,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { ImSpinner8 } from "react-icons/im";
-import { FaPlus, FaMinus } from "react-icons/fa";
 import { useCart } from "../../../components/common/CartContext";
 
 const ProductDetailPage = () => {
@@ -197,32 +196,7 @@ const ProductDetailPage = () => {
           </div>
 
           <div className="mt-6 border-t border-gray-200 pt-6">
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-sm font-medium text-gray-900">
-                Quantity
-              </span>
-              <div className="flex items-center border border-gray-300 rounded">
-                <button
-                  onClick={() => setQuantity((prev) => Math.max(1, prev - 1))}
-                  className="px-3 py-1 border-r border-gray-300"
-                >
-                 <FaMinus />
-                </button>
-                <input
-                  type="number"
-                  min="1"
-                  value={quantity}
-                  onChange={handleQuantityChange}
-                  className="w-12 text-center py-1 focus:outline-none"
-                />
-                <button
-                  onClick={() => setQuantity((prev) => prev + 1)}
-                  className="px-3 py-1 border-l border-gray-300"
-                >
-                  <FaPlus/>
-                </button>
-              </div>
-            </div>
+            
 
             <div className="flex items-center mb-4">
               <span className="text-sm font-medium text-gray-900 w-32">
